@@ -5,12 +5,18 @@
     font-family: 'Be Vietnam Pro';
     font-size: 16px;
 }
+body{
+    font-size: 16px;
+    background-image: url('../img/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+}
 .pad{
-    padding: 70px;
+    padding: 60px;
     padding-bottom: 0px;
 }
 .container{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -21,7 +27,26 @@
 .padding{
     padding-left: 30px;
 }
+.menu{
+    visibility: hidden;
+}
 .button-red{
+    background: rgb(242, 95, 58);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    width: 134px;
+    height:44px;
+}
+.button-red-sect{
+    background: rgb(242, 95, 58);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    width: 134px;
+    height:44px;
+}
+.button-red-tr{
     background: rgb(242, 95, 58);
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
@@ -41,6 +66,13 @@
     margin-top: 125px;
     margin-bottom: 125px;
     margin-left: 50px;
+}
+.width-sc{
+    width: 45%;
+}
+.width-sd{
+    width: 45%;
+    text-align: left;
 }
 h1{
     font-size: 58px; 
@@ -73,6 +105,27 @@ h2{
     line-height: 23px;
     color: #323851;
     margin-bottom: 10px;
+    list-style: none;
+}
+.ol-style{
+    counter-reset: item;
+    position: relative;
+}
+.style-list:before{
+    display: inline-flex;
+    position: absolute;
+    content: counter(item);
+    counter-increment: item;
+    background: rgb(242, 95, 58);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    width: 69px;
+    height: 45px;
+    left: -50px;
+    color: white;
+    justify-content: center;
+    align-items: center;
 }
 .list-p{
     font-size: 16.2984px;
@@ -101,8 +154,7 @@ h3{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
-    background-color: #FAFAFA;
-    width:90vw;
+    background-color: rgb(249, 249, 249);
     height: 250px;
 }
 .opinions{
@@ -111,6 +163,7 @@ h3{
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 30%;
 }
 #image-size{
     position: absolute;
@@ -131,9 +184,9 @@ h4{
     justify-content: space-between; 
     align-items: center;
     background-color: #F3613C;
-    height: 225px;
+    height: 250px;
     margin-top: 200px;
-    padding-right: 200px;
+    padding-right: 100px;
 }
 .button-white{
     background: #FFFFFF;
@@ -155,34 +208,58 @@ h5{
     padding-left: 100px;
 }
 .divisor{
-    width: 700px;
+    width: 70%;
     height: 200px;
     display: flex;
     align-items: center;
 }
 footer{
+    position: relative;
+    width: 100%;
     display: flex;
     background-color: #1E1E26;
     color:white;
     padding-left: 100px;
-    padding-top: 30px;
-    padding-right: 100px;
-    padding-bottom: 30px;
-    height: 240px;
+    height: 300px;
     justify-content: space-between;
     align-items: center;
 }
 .logos{
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: space-between; 
+    height: 100px;
+    align-items: flex-start;
+    width: 30%;
+}
+.logo-white{
+    width: 128px;
+    height: 24px;
+
+}
+.iconos{
+    padding-right: 15px;
 }
 .foot-list{
     list-style: none;
 }
+.footer-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35%;
+}
+.padding-bt{
+    padding-bottom: 10px;
+}
+form{
+    display: flex;
+    width:300px;
+    justify-content: flex-start;
+}
 .inbox{
-    width: 250px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     border-radius: 50px;
     padding: 15px;
 }
@@ -191,8 +268,155 @@ footer{
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
     border: none;
-    width: 70px;
-    height: 45px;
+    width: 30%;
+    height: 100%;
     color: white;
     margin-left: 10px;
+}
+.copy{
+    position: absolute;
+    bottom: 5%;
+    right: 6%;
+    font-weight: 500;
+    font-size: 12.5px;
+    line-height: 18px;
+    color: #8C8C94;
+}
+@media (max-width:376px){
+    *{
+        font-size: 12px;
+    }
+    .pad{
+         padding: 15px;
+    }
+    .padding{
+        padding: 0px;
+    }
+    .style-ulist{
+        display: none;
+    }
+    .button-red{
+        display: none;
+    }
+    .menu{
+        visibility:visible;
+    }
+    .second-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin:10px;
+    }
+    h1{
+        font-size: 35px;
+        text-align: center;
+    }
+    .illustration{
+        width: 80vw;
+    }
+    .width-sc{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .width-sd{
+        width: 100%;
+        text-align: center;
+    }
+    .style-p{
+        font-size: 14px;
+    }
+    .third-container{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+        margin-top: 70px;
+    }
+    h2{
+        font-size: 25px; 
+
+    }
+    .style-list{
+        font-size: 14px;
+        background-color: rgb(255, 239, 234);
+    }
+    .list-p{
+        font-size: 12px;
+    }
+    .style-list:before{
+        width: 45px;
+        height: 25px;
+        left: -8px;
+    }
+    h3{
+        font-size: 32px;
+    }
+    .opinions:nth-of-type(1){
+        width: 100%;
+    }
+    .opinions:nth-of-type(2){
+        display: none;
+    }
+    .opinions:nth-of-type(3){
+        display: none;
+    }
+    .fifth-container{
+        height: 100%;
+        flex-direction: column;
+        margin: 0px;
+        margin-top:50px;
+        padding: 100px 0px;
+    }
+    .divisor{
+        width: 100%;
+        height: 100%;
+    }
+    h5{
+        font-size: 32px;
+        margin: 0px;
+        padding: 20px;
+        text-align: center;
+    }
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding:10px;
+        height: 500px;
+    }
+    .icons{
+        display: flex;
+        flex-direction: row;
+    }
+    .logos{
+        width: 100%;
+        align-items: center;
+    }
+    .logos:nth-of-type(1){
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        height: 200px;
+        padding-bottom: 100px;
+    }
+    .footer-list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .copy{
+        bottom: 5%;
+        right: 20%;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
