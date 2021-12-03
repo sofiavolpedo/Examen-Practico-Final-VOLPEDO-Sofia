@@ -282,7 +282,7 @@ form{
     line-height: 18px;
     color: #8C8C94;
 }
-@media (max-width:376px){
+@media (max-width:1100px){
     *{
         font-size: 12px;
     }
